@@ -1,0 +1,39 @@
+.home-popular {
+    text-align: center;
+  }
+  
+  .view-toggle-buttons {
+    display: flex; /* Flexbox로 자식 요소를 정렬 */
+    justify-content: center; /* 버튼을 가운데 정렬 */
+    align-items: center; /* 수직 방향 가운데 정렬 */
+    margin: 100px 0 20px;
+    padding-right: 30px;
+    float: none; /* float 제거 */
+    gap: 10px; /* 버튼 간 간격 */
+  }
+  
+  .view-toggle-buttons button {
+    margin: 0; /* 상하좌우 여백 제거 */
+    padding: 10px 20px;
+    font-size: 0.7em;
+    cursor: pointer;
+    width: 120px;
+    height: 50px;
+    background-color: #ddd;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .view-toggle-buttons button:hover {
+    background-color: #ccc;
+  }
+  
+  .view-toggle-buttons .active {
+    font-weight: bold;
+    text-decoration: underline;
+    background-color: red;
+    color: white;
+  }
+  
+  
