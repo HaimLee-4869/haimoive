@@ -43,7 +43,7 @@ function Wishlist() {
                 className="w-full h-full object-cover" // 카드 안에 이미지 꽉 채우기
               />
               <div className="absolute top-2 right-2 bg-red-600 text-white text-lg p-2 rounded-full">
-                ❤️
+                🌸
               </div>
               <div className="p-4 text-white text-center font-semibold truncate">{movie.title}</div>
             </div>
