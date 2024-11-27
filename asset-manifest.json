@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/haimoive/static/css/main.a4c1d1c0.css",
-    "main.js": "/haimoive/static/js/main.06350703.js",
+    "main.js": "/haimoive/static/js/main.0e987308.js",
     "index.html": "/haimoive/index.html",
     "main.a4c1d1c0.css.map": "/haimoive/static/css/main.a4c1d1c0.css.map",
-    "main.06350703.js.map": "/haimoive/static/js/main.06350703.js.map"
+    "main.0e987308.js.map": "/haimoive/static/js/main.0e987308.js.map"
   },
   "entrypoints": [
     "static/css/main.a4c1d1c0.css",
-    "static/js/main.06350703.js"
+    "static/js/main.0e987308.js"
   ]
 }
