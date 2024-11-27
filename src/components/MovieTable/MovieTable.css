@@ -1,13 +1,11 @@
 .movie-table {
-    width: 80%;
-    margin: 100px auto 0; 
-  }
-  .movie-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-    border: 2px solid #ff2f2f;
-  }
+  width: 80%; /* 화면 너비의 80% */
+  margin: 50px auto; /* 상하 50px, 좌우 중앙 정렬 */
+  border-collapse: collapse;
+  border: 2px solid #ff2f2f; /* 테이블 외곽선 */
+  margin-bottom: 20px; /* 기존 하단 여백 유지 */
+}
+
   
   .movie-table th,
   .movie-table td {
@@ -20,7 +18,7 @@
  
     padding: 12px;
     text-align: left;
-    background-color: rgba(255, 220, 220, 0.7); /* 데이터 셀만 투명도 적용 */
+    background-color: rgba(0, 0, 0, 0.7); /* 데이터 셀만 투명도 적용 */
   }
   
   .movie-table th {
@@ -29,12 +27,12 @@
     color: #000000; /* 헤더 텍스트 검정색으로 변경 */
     font-weight: bold;
   
-    background-color: #ffffff; /* 헤더는 불투명한 흰색 유지 */
+    background-color: #494949; /* 헤더는 불투명한 흰색 유지 */
     font-weight: bold;
     padding: 12px;
-    text-align: left;
+    text-align: center;
 
-    color: #333; /* 헤더 텍스트 색상 */
+    color: #ffffff; /* 헤더 텍스트 색상 */
   }
   
   .movie-row {
@@ -92,10 +90,14 @@
   
   .overview {
     display: -webkit-box;
+    display: box; /* 표준 속성 */
     -webkit-line-clamp: 3;
+    line-clamp: 3; /* 표준 속성 */
     -webkit-box-orient: vertical;
+    box-orient: vertical; /* 표준 속성 */
     overflow: hidden;
   }
+  
   
   .pagination {
     display: flex;

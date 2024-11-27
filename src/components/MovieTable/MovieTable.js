@@ -49,7 +49,6 @@ function MovieTable({ fetchUrl }) {
       <table className="movie-table">
         <thead>
           <tr>
-            <th>순위</th>
             <th>포스터</th>
             <th>제목</th>
             <th>개봉</th>
@@ -59,9 +58,8 @@ function MovieTable({ fetchUrl }) {
           </tr>
         </thead>
         <tbody>
-          {movies.map((movie, index) => (
+          {movies.map((movie) => (
             <tr key={movie.id} className="movie-row">
-              <td>{(currentPage - 1) * moviesPerPage + (index + 1)}</td>
               <td className="poster-cell">
                 <img
                   src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
@@ -92,11 +90,11 @@ function MovieTable({ fetchUrl }) {
       </table>
       <div className="pagination-controls">
         <button onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}>
-          이전
+          ◁
         </button>
-        <span>Page {currentPage}</span>
+        <span> {currentPage} 페이지 </span>
         <button onClick={() => setCurrentPage(prev => prev + 1)}>
-          다음
+          ▷
         </button>
       </div>
     </div>
