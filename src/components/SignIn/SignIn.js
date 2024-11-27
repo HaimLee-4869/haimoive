@@ -111,7 +111,7 @@ function SignIn() {
       const success = await handleLogin(email, password);
       
       if (success) {
-        // 로그인 상태 유지 처리
+        // 로그인 상태 유지
         if (rememberMe) {
           localStorage.setItem('rememberedEmail', email);
           localStorage.setItem('rememberedPassword', password);
