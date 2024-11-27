@@ -96,6 +96,11 @@ header {
     width: 150px;       /* 버튼 너비 */
   }
   
+  .title-btn:hover {
+    transform: scale(1.05); /* 살짝 확대 효과 */
+  }
+  
+  
   /* 반응형 */ /*나중에 보고 수정,..*/
   @media screen and (max-width: 1200px) {
     .banner {

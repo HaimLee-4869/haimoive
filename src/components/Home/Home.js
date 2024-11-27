@@ -58,11 +58,11 @@ function Home({ title, fetchUrl }) {
   return (
     <div className="movie-row flex flex-col items-center">
       <h2 className="text-2xl font-bold mb-4">{title}</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+      <div className="grid grid-cols-3 gap-4">
         {movies.map((movie) => (
           <div
             key={movie.id}
-            className="movie-card cursor-pointer overflow-hidden rounded-lg relative transform transition-transform duration-300 hover:scale-105"
+            className="col-start-1 movie-card cursor-pointer overflow-hidden rounded-lg relative transform transition-transform duration-300 hover:scale-105"
           >
             <img
               src={getImageUrl(movie.poster_path)}

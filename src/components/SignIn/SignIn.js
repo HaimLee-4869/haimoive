@@ -124,7 +124,7 @@ function SignIn() {
         
         navigate('/');
       } else {
-        toast.error('이메일 또는 비밀번호가 올바르지 않습니다.');
+        toast.error('이메일 또는 TMDB API Key가 올바르지 않습니다.');
       }
     } catch (error) {
       console.error('로그인 에러:', error);
@@ -201,7 +201,7 @@ function SignIn() {
                     onChange={(e) => setPassword(e.target.value)}
                     required
                   />
-                  <label htmlFor="password">비밀번호</label>
+                  <label htmlFor="password">TMDB API Key</label>
                 </div>
                 <span className="checkbox remember">
                   <input
@@ -246,7 +246,7 @@ function SignIn() {
                     onChange={(e) => setRegisterPassword(e.target.value)}
                     required
                   />
-                  <label htmlFor="register-password">비밀번호</label>
+                  <label htmlFor="register-password">TMDB API Key</label>
                 </div>
                 <div className="input">
                   <input
@@ -257,7 +257,7 @@ function SignIn() {
                     onChange={(e) => setConfirmPassword(e.target.value)}
                     required
                   />
-                  <label htmlFor="confirm-password">비밀번호 확인</label>
+                  <label htmlFor="confirm-password">TMDB API Key 확인</label>
                 </div>
                 <div className="checkbox-wrapper">
                   <input

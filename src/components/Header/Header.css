@@ -154,7 +154,7 @@
   gap: 5px;
   padding: 8px 15px;
   background-color: var(--button-background);
-  border-radius: 4px;
+  border-radius: 10px;
   font-size: 1rem;
   white-space: nowrap;
   transition: all 0.3s ease;
