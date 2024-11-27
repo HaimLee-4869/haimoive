@@ -45,13 +45,15 @@ npm 또는 yarn
    git clone https://github.com/username/haimoive.git
    cd haimoive
 2. 의존성 설치
-    npm install
+### `npm install`
 3. 환경 변수 설정
     .env 파일을 생성하고 TMDB API 키를 추가합니다.
     REACT_APP_TMDB_API_KEY=your_tmdb_api_key
 4. 실행
-    npm start
+### `npm start`
     애플리케이션은 기본적으로 http://localhost:3000에서 실행됩니다.
+
+### `npm run build`
 
 ---
 
