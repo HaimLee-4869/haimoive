@@ -1,19 +1,4 @@
-/* 헤더 */
-header {
-    position: fixed;    /* 화면 상단 고정, 스크롤해도 위치 유지 */
-    top: 0;             /* 화면 맨 위에 배치 */
-    width: 100%;        /* 화면 너비 전체를 차지 */
-    height: 60px;       /* 헤더의 높이 */
-    z-index: 20;        /* 배너보다 위에 표시되도록 설정 */
-    background-color: rgba(0, 0, 0, 1);   /* 검정 배경 */   /*수정*/
-    color: white;       /* 텍스트 흰색 */
-    display: flex;          /* 자식 요소를 flex 박스로 정렬 */
-    align-items: center;    /* 수직 가운데 정렬 */
-    padding: 0 20px;        /* 좌우에 20px 여백 추가 */
-    box-sizing: border-box;      /* 패딩을 포함해 크기 계산 */
-  }
-  
-  /* 배너 스타일 */
+  /* 배너 */
   .banner {
     top:3px;        /* 헤더 아래 3px 공간 */
     height: 60vh;       /* 화면 높이의 60% */
@@ -68,7 +53,6 @@ header {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.8); /* 텍스트에 그림자 추가 */
     color:white;             /* 흰색 텍스트 */
     font-weight: 400; /* 보통 글씨 굵기 */
-    /*line-height: 1.8;*/ /* 줄 간격 */
   }
   
   .play-btn, .info-btn {
@@ -82,12 +66,12 @@ header {
   }
   
   .play-btn {
-    background-color: white;        /* 흰색 배경 */
-    color: rgb(255, 44, 146);       /* 텍스트 색 */ /*흰색??*/
+    background-color: white;      
+    color: rgb(255, 44, 146);      
   }
   
   .info-btn {
-    background-color: rgba(109, 109, 110, 0.7); /* 회색 반투명 배경 */
+    background-color: rgba(109, 109, 110, 0.7);
     color: rgb(0, 0, 0);       /* 텍스트 색 */
   }
   
@@ -101,10 +85,10 @@ header {
   }
   
   
-  /* 반응형 */ /*나중에 보고 수정,..*/
+  /* 반응형 */
   @media screen and (max-width: 1200px) {
     .banner {
-        height: 120vh; /* 화면 높이 줄어들 때 높이 50% */
+        height: 120vh; 
     }
     .banner h1 {
         font-size: 2.5rem;
@@ -122,7 +106,7 @@ header {
     }
   }
   
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 750px) {
     .banner {
         height: 50vh;
     }
@@ -142,7 +126,7 @@ header {
     }
   }
   
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 550px) {
     .banner {
         height: 70vh;
     }
