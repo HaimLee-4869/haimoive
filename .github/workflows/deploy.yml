@@ -21,11 +21,6 @@ jobs:
       - name: Install Dependencies
         run: yarn install
 
-      - name: Build React app
-        env:
-          REACT_APP_TMDB_API_KEY: ${{ secrets.REACT_APP_TMDB_API_KEY }}
-        run: npm run build
-
       - name: Build Project
         run: yarn build
         env:
