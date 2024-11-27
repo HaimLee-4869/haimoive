@@ -26,6 +26,11 @@ jobs:
         env:
           CI: ""
 
+      - name: Build React app
+        env:
+          REACT_APP_TMDB_API_KEY: ${{ secrets.REACT_APP_TMDB_API_KEY }}
+        run: npm run build
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
