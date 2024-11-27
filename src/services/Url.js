@@ -2,7 +2,9 @@ import axios from 'axios';
 
 class UrlService {
   constructor() {
-    this.apiKey = process.env.REACT_APP_TMDB_API_KEY;
+    // this.apiKey = process.env.REACT_APP_TMDB_API_KEY;
+    
+    this.apiKey = localStorage.getItem("TMDb-Key");
     this.baseURL = 'https://api.themoviedb.org/3';
     this.language = 'ko-KR';
     this.headers = {
