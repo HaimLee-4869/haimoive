@@ -25,9 +25,13 @@ const genreMap = {
   37: '서부'
 };
 
+// 장르 ID 배열을 이름으로 변환
 const getGenreNames = (genreIds) => {
   if (!genreIds) return '-';
-  return genreIds.map(id => genreMap[id] || id).join(', ');
+  return genreIds.reduce((names, id) => {
+    const genreName = genreMap[id] || id;
+    return names.length > 0 ? `${names}, ${genreName}` : genreName;
+  }, '');
 };
 
 function MovieTable({ fetchUrl }) {
@@ -38,8 +42,12 @@ function MovieTable({ fetchUrl }) {
 
   useEffect(() => {
     const fetchMovies = async () => {
-      const fetchedMovies = await urlService.fetchPopularMovies(currentPage);
-      setMovies(fetchedMovies);
+      try {
+        const fetchedMovies = await urlService.fetchPopularMovies(currentPage);
+        setMovies(fetchedMovies);
+      } catch (error) {
+        console.error('영화를 가져오는 중 오류 발생:', error);
+      }
     };
     fetchMovies();
   }, [fetchUrl, currentPage]);
@@ -62,16 +70,16 @@ function MovieTable({ fetchUrl }) {
             <tr key={movie.id} className="movie-row">
               <td className="poster-cell">
                 <img
-                  src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
+                  src={movie.poster_path ? `https://image.tmdb.org/t/p/w200${movie.poster_path}` : '/no-image-available.jpg'}
                   alt={movie.title}
                   className="movie-poster"
                 />
               </td>
               <td className="title-cell">{movie.title}</td>
-              <td>{new Date(movie.release_date).toLocaleDateString('ko-KR')}</td>
+              <td>{movie.release_date ? new Date(movie.release_date).toLocaleDateString('ko-KR') : '-'}</td>
               <td className="rating-cell">
                 <div className="rating">
-                  {[...Array(5)].map((_, i) => (
+                  {Array.from({ length: 5 }).map((_, i) => (
                     <FaStar
                       key={i}
                       className={i < Math.round(movie.vote_average / 2) ? 'star filled' : 'star'}
@@ -82,18 +90,18 @@ function MovieTable({ fetchUrl }) {
               </td>
               <td>{getGenreNames(movie.genre_ids)}</td>
               <td className="overview-cell">
-                <div className="overview">{movie.overview}</div>
+                <div className="overview">{movie.overview || '줄거리가 없습니다.'}</div>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
       <div className="pagination-controls">
-        <button onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}>
+        <button onClick={() => setCurrentPage((prev) => Math.max(1, prev - 1))} disabled={currentPage === 1}>
           ◁
         </button>
         <span> {currentPage} 페이지 </span>
-        <button onClick={() => setCurrentPage(prev => prev + 1)}>
+        <button onClick={() => setCurrentPage((prev) => prev + 1)}>
           ▷
         </button>
       </div>

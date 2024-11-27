@@ -13,7 +13,6 @@ function MovieGrid({ fetchUrl }) {
   const gridContainerRef = useRef(null);
   const loadMoreRef = useRef(null);
 
-  /* 무한 스크롤 */
   const {
     data,
     isLoading,
