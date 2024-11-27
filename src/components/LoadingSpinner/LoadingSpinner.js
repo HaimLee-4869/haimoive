@@ -1,7 +1,6 @@
 import React from 'react';
 import './LoadingSpinner.css';
 
-/* css 파일 참고 */
 
 function LoadingSpinner() {
   return (
