@@ -1,5 +1,8 @@
 # Haimovie 🎥
 https://haimlee-4869.github.io/haimoive/
+
+--- 
+
 Haimovie는 TMDB API를 활용하여 인기 영화, 애니메이션, 다큐멘터리를 검색하고 위시리스트로 관리할 수 있는 Netflix 스타일의 프론트엔드 웹 애플리케이션입니다.
 
 ---
