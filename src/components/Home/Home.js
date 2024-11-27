@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import useFetch from '../../services/useFetch'; /*수정*/
+import useFetch from '../../services/useFetch';
 import URLService from '../../services/Url';
 
 function Home({ title, fetchUrl }) {
@@ -7,7 +7,8 @@ function Home({ title, fetchUrl }) {
   const [movies, setMovies] = useState([]);
   const [genres, setGenres] = useState({});
 
-  const urlService = new URLService();
+  // URLService 객체를 useMemo로 메모이제이션
+  const urlService = React.useMemo(() => new URLService(), []);
 
   useEffect(() => {
     const fetchGenres = async () => {
@@ -24,7 +25,7 @@ function Home({ title, fetchUrl }) {
     };
 
     fetchGenres();
-  }, []);
+  }, [urlService]); // urlService를 의존성 배열에 포함
 
   useEffect(() => {
     if (data) {

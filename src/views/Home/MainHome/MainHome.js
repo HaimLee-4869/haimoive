@@ -4,7 +4,7 @@ import HomeMiddle from '../../../components/Home/Home';
 import URLService from '../../../services/Url';
 import { useQuery } from '@tanstack/react-query';
 
-function MainHome() {
+function HomeMain() {
   const urlService = new URLService();
 
   // 인기 영화 데이터 가져오기
@@ -52,4 +52,4 @@ function MainHome() {
   );
 }
 
-export default MainHome;
+export default HomeMain;
